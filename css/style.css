@@ -86,11 +86,16 @@ main {
   
 
 img {
+img {
   max-width: 100%;
   height: auto;
+  margin: 5px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
+  display: block;
+  box-sizing: border-box;
+}
 }
 img:hover {
     border: 2px solid #e05893;;
