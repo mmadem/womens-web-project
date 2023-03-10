@@ -33,6 +33,19 @@ ul {
   margin-left: 10px;
 }
 
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
 /* layout */
 header {
 
@@ -85,21 +98,21 @@ main {
   }
   
 
-img {
-img {
-  max-width: 100%;
-  height: auto;
-  margin: 5px;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: block;
-  box-sizing: border-box;
-}
-}
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    box-sizing: border-box;
+  }
+
 img:hover {
     border: 2px solid #e05893;;
   }
+
 .thanks {
   text-align: center;
   margin-bottom: 10px;
@@ -111,7 +124,7 @@ img:hover {
   margin-top: 10px;
   font-size: 1.2rem;
   text-decoration: none;
-  color: #0100c0;
+  color: #e05893;
 }
 
 /* responsive */
@@ -131,6 +144,70 @@ img:hover {
 }
 
 
+@media screen and (min-width: 700px){
+  nav ul {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .nav-active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #333;
+  }
+  
+  .nav-active ul li {
+    margin: 20px 0;
+  }
+  
+  .nav-active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 6px);
+  }
+  
+  .nav-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -6px);
+  }
+
+  
+  /* Requirements 12-15 here: */
+  a.skip:focus{
+    left: 0px;
+    top: 20px;
+    position: absolute;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px;
+  }
+
+  .about, .method, .clients-image, .contact-image{
+    grid-column: 3 / span 2;
+  }
+
+  .about-image, .method-image, .clients, .contact {
+    grid-column: 2 / span 2;
+  }
+
+  text{
+    align-self: center;
+  }
+}
 
 
 
