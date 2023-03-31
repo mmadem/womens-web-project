@@ -1,213 +1,472 @@
+nav {
+  background-color: #D95B72;
+  height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-html {
-  box-sizing: border-box;
+    z-index: 100;
+  
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* typography */
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
+nav li {
+  padding: 0;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #e05893;
+nav a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
+
+nav ul li a:hover {
+  background-color: #7ED9D0;
+  transform: scale(2.1);
+}
+
+
+img.dissolve {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+body {
+  background-color: #F2C2C2;
+}
+
+/* CHANGE */
+h1 {
+  position: relative;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: -40px; /* Half the height of the heading */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #F2C2C2;
+  z-index: 2;
+
+  text-align: center;
+}
+
+/* Position the image */
+
+
+header h1 {
+  background-color: #026873;
+  width: 50%;
+  color: #F2C2C2;
+  padding: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.intro {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  /* styles here */
+}
+
+a[href="https://lsa.umich.edu/women"] {
+  color: #F2C2C2;
+}
+
+div.intro{
+  background-color: #026873;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 80%;
+  text-align: left;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a[href="#h2"] i.fas.fa-arrow-circle-down {
+  font-size: 3.5rem;
+  color: #F2C2C2;
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 48%;
+  right: 0;
+  bottom: 50px;
+}
+
 
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
+  color: #F2C2C2;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  
+}
+
+h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background-color: #F2C2C2;
+  border-radius: 20px;
+}
+
+
+div.contents{
+  background-color: #026873;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 50%;
+  text-align: left;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+
+}
+
+div.disclaim {
+  background-color: #026873;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #D95B72;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Define the grid */
+main.bye {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  position: relative;
+  margin-top: 150px; /* change the value as needed */
+  padding: 10px;
+
+}
+
+/* Style the grid items */
+main > div {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 50px;
+  margin-top: 20%;
+  background-color: #026873;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the headings */
+main > div > h1 {
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+/* Style the images */
+main > div > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the content paragraphs */
+main > div > p {
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
-ul {
-  margin-left: 10px;
+/* Style the subheadings */
+main > div > h3 {
+  margin-top: 0;
 }
 
-.hamburger-menu {
-  display: none;
-  cursor: pointer;
+img {
+  border: 10px solid #D95B72;
+  border-radius: 10px;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+/* CSS code for the image pop-out effect */
+.lit:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-out;
+  color: #D95B72;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-  transition: 0.4s;
+
+h3 {
+  font-size: 1em;
+  color: #026873;
+  font-weight: bold;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  position: relative;
+  
 }
 
-/* layout */
-header {
-
-  align-items: center;
-  padding: 20px;
+.box-list {
+  border: 3px solid #D95B72;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10%;
+  background-color: #7ED9D0;
 }
 
-nav{
-    background-color: #000000;
-    padding: 25px 200px;   
-    text-align: center;   
-  }
+.box-list h3 {
+  margin-top: 0;
+}
+
+.box-list ul {
   
-  nav a{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-  }
-  
-  nav ul{
-    list-style-type: none; 
-  }
-  
-  nav li{
-    display: inline;
-    margin-right: 5%;
-  }
-  
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.box-list li {
+  margin-bottom: 5px;
+}
 
 
-nav a:hover {
+/* CHANGE */
+p{
   color: #ffffff;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    border: 1px solid #ccc; /* add border */
-    border-radius: 5px; /* add border radius for a rounded look */
-  }
-  
-
-  div {
-    border: 1px solid #ccc;
-    padding: 50px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-
-  img {
-    max-width: 100%;
-    height: auto;
-    margin: 5px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: block;
-    box-sizing: border-box;
-  }
-
-img:hover {
-    border: 2px solid #e05893;;
-  }
-
-.thanks {
-  text-align: center;
-  margin-bottom: 10px;
+.fa-eye {
+  font-size: 20px;
+  color: #D95B72;
+  animation: blink 1s infinite;
+  padding-right: 5%;
 }
 
-.tops {
-  display: block;
+@keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+main.hi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 10%;
+  padding: 20px;
+}
+
+main.hi > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ 
+}
+
+main.hi h1 {
+  margin-top: 20px;
   text-align: center;
+}
+
+main.hi img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main.hi p {
   margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 20px;
+}
+
+main.hi div {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* style for image on hover */
+main.hi div img:hover {
+
+  border-radius: 10px;
+}
+
+/* Style for the A-Z anchors */
+.alphabet a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Style for the selected A-Z anchor */
+.alphabet a.active {
+  font-weight: bold;
+}
+
+/* Position the A-Z alphabet below the nav bar */
+.alphabet {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10%;
+}
+
+/* Style for the div elements */
+div.alphabet {
+  margin-top: 0%;
+}
+
+/* Style for the definition terms */
+dt {
+  font-weight: bold;
+  margin-top: 40px;
+  font-family: "Gill Sans", sans-serif;
+  color: #F2C2C2;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+/* Style for the definition descriptions */
+dd {
+  margin-left: 30px;
+  margin-bottom: 20px;
   font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Style for the interpretation paragraphs */
+p {
+  margin: 5px 0;
+}
+
+/* Set style for alphabet navigation bar */
+.alphabet {
+  display: flex;
+  border-radius: 30px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #D95B72;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Set style for alphabet navigation bar links */
+.alphabet a {
+  text-decoration: wavy;
+  font-size: 30px;
+  border-radius: 30px;
   text-decoration: none;
-  color: #e05893;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 5px;
 }
 
-/* responsive */
-@media (max-width: 600px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 5px 0;
-  }
+/* Set hover style for alphabet navigation bar links */
+.alphabet a:hover {
+  color: #026873;
+  text-decoration: underline;
 }
 
-
-@media screen and (min-width: 700px){
-  nav ul {
-    display: none;
-  }
-  
-  .hamburger-menu {
-    display: block;
-  }
-  
-  .nav-active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background-color: #333;
-  }
-  
-  .nav-active ul li {
-    margin: 20px 0;
-  }
-  
-  .nav-active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-7px, 6px);
-  }
-  
-  .nav-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .nav-active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-7px, -6px);
-  }
-
-  
-  /* Requirements 12-15 here: */
-  a.skip:focus{
-    left: 0px;
-    top: 20px;
-    position: absolute;
-  }
-
-  .container{
-    display: grid;
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 300px 300px 300px 300px;
-  }
-
-  .about, .method, .clients-image, .contact-image{
-    grid-column: 3 / span 2;
-  }
-
-  .about-image, .method-image, .clients, .contact {
-    grid-column: 2 / span 2;
-  }
-
-  text{
-    align-self: center;
-  }
+main.word{
+  margin-top: 20%;
+}
+.word {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
 }
 
 
+dl {
+  background-color: #026873;
+  color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 30px;
+}
 
+
+.word div {
+  border-bottom: 8px dotted #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+div:first-child,
+div:last-child {
+  border-bottom: none;
+}
