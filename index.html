@@ -10,52 +10,56 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
-  <link href="https://fonts.googleapis.com/css2?family=Font+Name&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue">
 
   <!-- connect to a Font Aweseom font -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- connect to a favicon -->
-  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="favicon.ico" />
 
 
   <title>Women's Web</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="literature.html">Literature</a></li>
-          <li><a href="history.html">History and Politics</a></li>
-          <li><a href="femdict.html">Feminist Dictionary</a></li>
-        </ul>
+  <div class="skip-link"><a href="#main-content">Skip to content</a></div>
 
-    </nav>
+  <nav>
+
+    <ul>
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="history.html">History and Politics</a></li>
+      <li><a href="femdict.html">Feminist Dictionary</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="ham" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</nav>
+
+  <main>
+  <header id="main-content">
+   
     <h1> Woman's Web </h1>
   </header>
 
-  <main>
+  
 
     <img class="dissolve" src="images/women_march_pano.jpg"  alt="This is an Image of the Ann Arbor Women's March">
 
 
     <div class="intro">
       <p>
-        This website started as an idea when Kelsey Toporski was a freshman in college taking my first <a href="https://lsa.umich.edu/women"> Women's Studies</a> class. As a junior, she had the skill set to make it happen. Growing up in a small, rural, conservative town, this class was really her first introduction to feminism and feminist thought, and she wanted to share her new found knowledge with others. This website is where a lot of feminist things could be compiled in one place, purely because people might not otherwise know about it. Her hometown may not have been forward thinking, but it did have internet connection.
+        This website started as an idea when Kelsey Toporski was a freshman in college taking my first <a href="https://lsa.umich.edu/content/michigan-lsa/wgs/en.html"> Women's Studies</a> class. As a junior, she had the skill set to make it happen. Growing up in a small, rural, conservative town, this class was really her first introduction to feminism and feminist thought, and she wanted to share her new found knowledge with others. This website is where a lot of feminist things could be compiled in one place, purely because people might not otherwise know about it. Her hometown may not have been forward thinking, but it did have internet connection.
       </p>
       <p>
         This website currently contains 3 pages other than this one - click below to see a short description of each!
       </p>
     </div>
 
-    <a href="#h2"><i class="fas fa-arrow-circle-down"></i></a>
-
-    
-
-
-      
+    <a href="#h2"><i class="fa fa-arrow-circle-down"></i>
+</a>
+     
       <div class="contents">
         <h2 id="h2">Literature</h2>
         <p>
@@ -93,4 +97,15 @@
   </footer>
   </main>
 </body>
+<script>
+  function myFunction() {
+    var x = document.querySelector("nav ul");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  
 </html>
