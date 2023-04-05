@@ -124,6 +124,7 @@ header h1 {
 
 a[href="https://lsa.umich.edu/content/michigan-lsa/wgs/en.html"] {
   color: #F2C2C2;
+  background-color: #000000;
 }
 
 div.intro{
@@ -151,6 +152,7 @@ a[href="#h2"] i.fa.fa-arrow-circle-down {
 
 a.tops {
   color: #F2C2C2;
+  background-color: #000000;
 }
 
 
