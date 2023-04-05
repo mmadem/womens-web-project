@@ -10,13 +10,19 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue">
+
   <!-- connect to a Font Aweseom font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- connect to a favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico" />
 
   <title>Women's Web - History</title>
 </head>
 
 <body>
+  <div class="skip-link"><a href="#main-content">Skip to content</a></div>
+
   <header>
     <nav>
         <ul>
@@ -25,18 +31,13 @@
           <li><a href="history.html">History and Politics</a></li>
           <li><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="ham" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
     </nav>
-      <!-- definitions from meriam webster -->
-      <!-- interpretations from
-            The Dictionary of Feminist Theory - Maggie Humm,
-            Key Concepts In Post-Colonial Studies - Ashcroft, Bill, Gareth Griffiths, and Helen Tiffin,
-            or myself -->
-      <!-- interpretation of equity from https://everydayfeminism.com/2014/09/equality-is-not-enough/ -->
-
     <h1>History &amp; Politics</h1>
   </header>
 
-  <main class="hi">
+  <main class="hi" id="main-content">
 
     
 <div>
@@ -295,5 +296,14 @@
       <a href="#top" class="tops">Back to Top</a>
     </footer>
 </body>
-
+<script>
+  function myFunction() {
+    var x = document.querySelector("nav ul");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
 </html>
