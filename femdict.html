@@ -10,21 +10,29 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue">
+
   <!-- connect to a Font Aweseom font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- connect to a favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico" />
 
   <title>Women's Web - Dictionary</title>
 </head>
 
 <body>
+  <div class="skip-link"><a href="#main-content">Skip to content</a></div>
+
   <header>
     <nav>
         <ul>
           <li><a href="index.html">About</a></li>
           <li><a href="literature.html">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
-          <li><a href="femdict.html">Feminist Dictionary</a></li>
+          <li><a href="femdict.html" class="active">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="ham" onclick="myFunction()">
+          <i class="fa fa-bars"></i> </a>
     </nav>
       <!-- definitions from meriam webster -->
       <!-- interpretations from
@@ -34,11 +42,11 @@
       <!-- interpretation of equity from https://everydayfeminism.com/2014/09/equality-is-not-enough/ -->
     
     <h1>Feminist Dictionary</h1>
-    <h2>Words you maybe don't understand but probably want to know</h2>
+    <h2 class="subhead">Words you maybe don't understand but probably want to know</h2>
 
   </header>
 
-  <main class="word">
+  <main class="word" id="main-content">
 
       <dl>
         <div class="alphabet">
@@ -58,6 +66,8 @@
 
           <!-- Add more anchors for each div if necessary -->
         </div>
+
+        
        <div id="Agency">
         <dt>Agency</dt>
         <dd>Definition
@@ -96,7 +106,7 @@
           </p></dd>
         </div>
 
-          <div id="Equality">
+          <div>
         <dt>Equity</dt>
         <dd>Definition
           <p>
@@ -147,7 +157,7 @@
        
         </div>
 
-        <div id="Hegemony">
+        <div>
         <dt>Heteronormativity</dt>
         <dd>Definition
           <p>
@@ -199,17 +209,17 @@
           </p></dd>
         </div> 
           
-      <div id="Sexism">
-        <dt>Sexism</dt>
-        <dd>Definition
-          <p>
-            prejudice or discrimination based on sex
-          </p></dd>
-        <dd>Interpretation
-          <p>
-            In conventional sociology "sex role" is a social role allocated to men and to women on a basis of biological sex. Feminist theory argues that gender associated behavior is linked arbitrarily by society to each biological sex. Women are given expressive traits and men instrumental traits. Sex roles are a form of oppression because they keep women from social activity.
-          </p></dd>
-        </div>
+        <div id="Sexism">
+          <dt>Sexism</dt>
+          <dd>Definition
+            <p>
+              prejudice or discrimination based on sex
+            </p></dd>
+          <dd>Interpretation
+            <p>
+              In conventional sociology "sex role" is a social role allocated to men and to women on a basis of biological sex. Feminist theory argues that gender associated behavior is linked arbitrarily by society to each biological sex. Women are given expressive traits and men instrumental traits. Sex roles are a form of oppression because they keep women from social activity.
+            </p></dd>
+          </div>
       </dl>
 
     </main>
@@ -224,4 +234,14 @@
     </footer>
 
 </body>
+<script>
+  function myFunction() {
+    var x = document.querySelector("nav ul");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
 </html>
