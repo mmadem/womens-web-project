@@ -1,3 +1,28 @@
+.skip-link a{
+  position: absolute;
+  left: 0;
+  top: -60px;
+  /* width: 1px;
+  height: 1px; */
+  /* overflow: hidden; */
+  transition: top 1s ease-out;
+  z-index: 1000;
+  /* background: white; */
+  padding: 6px;
+}
+
+.skip-link a:focus {
+  /* position: static;
+  width: auto;
+  height: auto; */
+  top: 0;
+}
+.active{
+  border: 3px #ffffff dotted;
+  color: #631c29;
+
+}
+
 nav {
   background-color: #D95B72;
   height: 80px;
@@ -27,7 +52,7 @@ nav a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 18px;
   transition: all 0.3s ease-in-out;
@@ -57,7 +82,7 @@ h1 {
   width: 100%;
   padding: 0 20px;
   margin-top: -40px; /* Half the height of the heading */
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Gill Sans", sans-serif;
   font-size: 3rem;
   font-weight: bold;
   color: #F2C2C2;
@@ -76,7 +101,7 @@ header h1 {
   padding: 30px;
   border-radius: 30px;
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 25%;
   transform: translateY(-50%);
   margin: 0 auto;
@@ -113,7 +138,7 @@ div.intro{
   font-weight: bold;
 }
 
-a[href="#h2"] i.fas.fa-arrow-circle-down {
+a[href="#h2"] i.fa.fa-arrow-circle-down {
   font-size: 3.5rem;
   color: #F2C2C2;
   display: block;
@@ -165,15 +190,15 @@ div.contents{
 }
 
 div.disclaim {
-  background-color: #026873;
-  color: #000000;
+  background-color: #631c29;
+
   padding: 20px;
   text-align: center;
 }
 
 footer {
-  background-color: #D95B72;
-  color: white;
+  background-color: #026873;
+  color: rgb(0, 0, 0);
   padding: 10px;
   text-align: center;
 }
@@ -249,7 +274,7 @@ img {
 
 h3 {
   font-size: 1em;
-  color: #026873;
+  color: #000000;
   font-weight: bold;
   margin-top: 4em;
   margin-bottom: 1em;
@@ -469,4 +494,239 @@ dl {
 div:first-child,
 div:last-child {
   border-bottom: none;
+}
+
+.ham {
+  display: none;
+}
+
+h2.subhead {
+  font-size: 2rem; /* Start small */
+  animation: myAnimation 2.5s ease-in-out; /* Animate for 1 second */
+  margin-top: 30%;
+  color: #026873;
+  
+}
+
+@keyframes myAnimation {
+  0% { font-size: 1rem; } /* Start small */
+  50% { font-size: 2rem; } /* Get bigger */
+  100% { font-size: 1rem; } /* Go back to small */
+}
+
+
+
+
+
+
+/* MOBILE VIEW */
+@media screen and (max-width: 767px) {
+  /* Hide navigation list */
+
+  body{
+    background-image: url(../images/women_march_pano.jpg);
+    background-color: #F2C2C2;
+  }
+  nav ul {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .ham {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+
+  /* Style hamburger icon */
+  .ham i {
+    color: #000000;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  /* Show navigation list when hamburger icon is clicked */
+  nav ul.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  /* Style links in navigation list */
+  nav ul.show li {
+    margin: 20px;
+  }
+
+
+div.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #026873;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 90%;
+  text-align: left;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+header h1 {
+
+  background-color: #026873;
+  width: 50%;
+  color: #F2C2C2;
+  padding: 10px;
+  border-radius: 30px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+
+a[href="#h2"] i.fas.fa-arrow-circle-down {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #F2C2C2;
+  margin: auto;
+  position: absolute;
+}
+
+h2 {
+  font-size: 1em;
+  color: #F2C2C2;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  position: relative;
+  
+}
+
+
+
+div.contents{
+  background-color: #026873;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 50%;
+  text-align: left;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+
+}
+
+div.disclaim {
+  background-color: #631c29;
+  padding: 20px;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+
+main.bye {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px; /* change the value as needed */
+  padding: 10px;
+
+}
+
+main > div:hover {
+  background-color: #631c29;
+}
+
+main.hi {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px; /* change the value as needed */
+  padding: 10px;
+
+}
+
+main.word{
+  margin-top: 50%;
+}
+
+h2.subhead {
+  font-size: 1rem; /* Start small */
+  animation: myAnimation 2.5s ease-in-out; /* Animate for 1 second */
+  margin-top: 70%;
+  color: #026873;
+  padding: 60px;
+}
+
+@keyframes myAnimation {
+  0% { font-size: 1rem; } /* Start small */
+  50% { font-size: 2rem; } /* Get bigger */
+  100% { font-size: 1rem; } /* Go back to small */
+}
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    main.bye {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      margin-top: 70%; /* change the value as needed */
+      padding: 20px;
+    
+    }
+    main > div:hover {
+      background-color: #631c29;
+    }
+
+    main.hi {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+      margin-top: 70%;
+      padding: 20px;
+    }
+
+
+    
+  
+h2.subhead {
+  font-size: 1rem; /* Start small */
+  animation: myAnimation 2.5s ease-in-out; /* Animate for 1 second */
+  margin-top: 50%;
+  color: #026873;
+  padding: 60px;
+}
+
+@keyframes myAnimation {
+  0% { font-size: 1rem; } /* Start small */
+  50% { font-size: 2rem; } /* Get bigger */
+  100% { font-size: 1rem; } /* Go back to small */
+}
 }
