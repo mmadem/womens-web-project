@@ -10,22 +10,30 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue">
+
   <!-- connect to a Font Aweseom font -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <!-- connect to a favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico" />
 
   <title>Women's Web - Literature</title>
 </head>
 
 <body>
+  <div class="skip-link"><a href="#main-content">Skip to content</a></div>
+
   <header>
     <nav>
         <ul>
           <li><a href="index.html">About</a></li>
-          <li><a href="literature.html">Literature</a></li>
+          <li><a href="literature.html" class="active">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
           <li><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="ham" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
     </nav>
       <!-- definitions from meriam webster -->
       <!-- interpretations from
@@ -37,7 +45,8 @@
     <h1>Feminist Literature</h1>
   </header>
 
-  <main class="bye">
+  <main class="bye" id="main-content">
+
 
       <div>
         <h1>bell hooks</h1> 
@@ -380,4 +389,16 @@
 
     </footer>
   </body>
+  <script>
+    function myFunction() {
+      var x = document.querySelector("nav ul");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+
+    </script>
 </html>
